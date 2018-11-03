@@ -10,7 +10,9 @@ class RoomList extends Component {
   }
 
 componentDidMount() {
-
+  this.roomsRef.on('child_added', snapshot => {
+       console.log(snapshot);
+     });
 }
 
 

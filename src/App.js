@@ -17,28 +17,33 @@ import * as firebase from 'firebase';
   firebase.initializeApp(config);
 
 class App extends Component {
-
-
   render() {
     return (
       <div className="App">
+      <div>
         <header className="App-header">
           <nav>
-            <Link to='/'>Home</Link>
+            <Link to='/'>Chatterboxes</Link>
+          </nav>
+          <nav>
             <Link to='/rooms'>Rooms</Link>
           </nav>
-          <h1>Chatterboxes</h1>
+        
         </header>
+      </div>
 
-
+      <div>
         <main className="App-body">
-          <Route path="/room" component={ RoomList }> Rooms />
+          <Route path="/room" component={ RoomList }> Rooms> </Route>
         </main>
+      </div>
 
+     <div>
         <footer className="App-footer">
           <h6>Copyright Jess Berrett</h6>
         </footer>
       </div>
+    </div>
 
     );
   }
