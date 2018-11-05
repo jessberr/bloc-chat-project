@@ -4,20 +4,28 @@
 
 .App-header {
   background-color: gray;
-  min-height: 50px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  border: dotted orange;
 }
 
 .App-body {
-  min-height: 800px;
+  min-height: 500px;
+}
+
+.room-list {
+  float: left;
+  min-height: 500px;
+  border: dotted orange;
+  padding: 5px
 }
 
 
 .App-footer {
-  min-height: 25px;
+  min-height: 15px;
 }

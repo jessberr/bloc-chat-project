@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import * as firebase from 'firebase';
@@ -21,16 +20,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <nav id='navigation'>
-            <Link to='/'>Chatterboxes</Link>
-          </nav>
-          <nav>
-            <Link to='/rooms'>Rooms</Link>
-          </nav>
+          <h1>Bloc ChatterBoxes</h1>
         </header>
 
         <main className="App-body">
-         <RoomList firebase= { firebase } />
+           <sidebar className="room-list">
+             <RoomList firebase= { firebase } />
+           </sidebar>
         </main>
 
 
