@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import RoomList from './component/RoomList';
 import * as firebase from 'firebase';
+import RoomList from './component/RoomList';
 
 // Initialize Firebase
   var config = {
@@ -20,23 +20,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <div>
         <header className="App-header">
-          <nav>
+          <nav id='navigation'>
             <Link to='/'>Chatterboxes</Link>
           </nav>
           <nav>
             <Link to='/rooms'>Rooms</Link>
           </nav>
-        
         </header>
-      </div>
 
-      <div>
         <main className="App-body">
-          <Route path="/room" component={ RoomList }> Rooms> </Route>
+         <RoomList firebase= { firebase } />
         </main>
-      </div>
+
+
+<hr></hr>
 
      <div>
         <footer className="App-footer">
