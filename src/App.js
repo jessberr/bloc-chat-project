@@ -24,13 +24,13 @@ class App extends Component {
         </header>
 
         <main className="App-body">
-           <sidebar className="room-list">
+           <sidebar className="Room-list">
              <RoomList firebase= { firebase } />
            </sidebar>
         </main>
 
 
-<hr></hr>
+
 
      <div>
         <footer className="App-footer">

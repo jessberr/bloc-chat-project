@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+
 }
 
 .App-header {
@@ -11,21 +11,30 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  border: dotted orange;
+  border: dotted 1px teal;
+  margin: 3px
 }
 
 .App-body {
   min-height: 500px;
 }
 
-.room-list {
+.Room-list {
   float: left;
-  min-height: 500px;
-  border: dotted orange;
-  padding: 5px
+  min-height: 480px;
+  border: dotted .5px orange;
+  padding: 5px;
+  margin: 3px;
+
+  text-align: center;
+  display: flex;
+
 }
 
 
 .App-footer {
   min-height: 15px;
+  border: solid .5px teal;
+  text-align: center;
+  justify-content: center;
 }
