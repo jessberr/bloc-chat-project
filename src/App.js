@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './component/RoomList';
@@ -28,6 +27,10 @@ class App extends Component {
            <sidebar className="Room-list">
              <RoomList firebase= { firebase } />
            </sidebar>
+
+           <div className="Message-list">
+             <MessageList firebase= { firebase } />
+           </div>
         </main>
 
 
