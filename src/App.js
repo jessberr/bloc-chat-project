@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './component/RoomList';
+import MessageList from './component/MessageList';
 
 // Initialize Firebase
   var config = {
