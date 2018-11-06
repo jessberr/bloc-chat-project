@@ -17,9 +17,13 @@ class MessageList extends Component {
 
   render() {
     return (
-      <div className="room-messages">
-
+    <section className="list-messages">
+      <div className="pick-room">
+        <h2>Pick a room and start chatting!</h2>
       </div>
+      <div className="room-messages">
+      </div>
+    </section>
     );
   }
   }

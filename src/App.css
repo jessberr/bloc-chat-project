@@ -11,7 +11,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  border: dotted 1px teal;
+  border: dotted 1px black;
   margin: 3px
 }
 
@@ -25,16 +25,24 @@
   border: dotted .5px orange;
   padding: 5px;
   margin: 3px;
-
   text-align: center;
   display: flex;
 
 }
 
+.list-messages {
+  float: left;
+  min-height: 480px;
+  border: dotted .5px teal;
+  padding: 5px;
+  margin: 3px;
+  display: flex;
+}
+
 
 .App-footer {
   min-height: 15px;
-  border: solid .5px teal;
+  border: solid .5px black;
   text-align: center;
   justify-content: center;
 }
