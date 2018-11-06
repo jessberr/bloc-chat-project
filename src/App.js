@@ -16,7 +16,14 @@ import MessageList from './component/MessageList';
   firebase.initializeApp(config);
 
 class App extends Component {
-  
+  constructor(props) {
+   super(props);
+   this.state = {activeRoom: undefined, activeRoomName: undefined};
+ }
+  handleClickRoom(e) {
+   this.setState({activeRoomKey: e.target.getAttribute('data-room-key'),
+                  activeRoomName: e.target.getAttribute('data-room-name')});
+ }
   render() {
     return (
       <div className="App">
@@ -26,11 +33,11 @@ class App extends Component {
 
         <main className="App-body">
            <sidebar className="Room-list">
-             <RoomList firebase= { firebase } />
+             <RoomList activeRoom={this.state.activeRoomKey} handleClickRoom={(e) => this.handleClickRoom(e)} firebase={firebase} />
            </sidebar>
 
            <div className="Message-list">
-             <MessageList firebase= { firebase } />
+             <MessageList activeRoomKey={this.state.activeRoomKey} activeRoomName={this.state.activeRoomName} firebase={firebase} />
            </div>
         </main>
 

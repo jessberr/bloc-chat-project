@@ -39,6 +39,10 @@
   display: flex;
 }
 
+.activeRoom {
+  background-color: lightblue;
+}
+
 
 .App-footer {
   min-height: 15px;

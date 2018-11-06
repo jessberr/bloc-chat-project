@@ -40,7 +40,13 @@ render() {
 
       <h3>Chat Rooms:</h3>
       {this.state.rooms.map((room) =>
-        <div key={room.key}>{room.name}</div>
+        <div data-room-key={room.key}
+                 data-room-name={room.name}
+                 className={'availableRoomItem' + (this.props.activeRoom === room.key ? ' activeRoom' : '')}
+                 key={room.key}
+                 onClick={this.props.handleClickRoom}>
+                 {room.name}
+            </div>
       )}
 
     <form className="newRooms" onSubmit={(e) => this.roomCreation(e)}>
