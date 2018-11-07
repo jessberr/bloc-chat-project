@@ -18,24 +18,11 @@ class MessageList extends Component {
   render() {
     return (
     <section className="list-messages">
-
       <div className="room-messages">
-      <h3>{this.props.activeRoomName}</h3>
-        {this.state.message
-            .filter((message) => this.props.activeRoom === message.roomId)
-            .map((message, index) =>
-              <p key={index} data-username={message.username} data-sent-at={message.sentAt}>
-                {message.username}: {message.content}
-              </p>
-        )}
+        
       </div>
     </section>
     );
   }
   }
-
-
-
-
-
 export default MessageList;

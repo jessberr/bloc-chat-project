@@ -22,7 +22,7 @@
 .Room-list {
   float: left;
   min-height: 480px;
-  border: dotted .5px orange;
+  border: dotted .5px coral;
   padding: 5px;
   margin: 3px;
   text-align: center;
@@ -40,7 +40,7 @@
 }
 
 .activeRoom {
-  background-color: lightblue;
+  background-color: coral;
 }
 
 
