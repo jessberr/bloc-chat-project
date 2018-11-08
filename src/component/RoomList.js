@@ -33,7 +33,6 @@ roomCreation (e) {
   }
 }
 
-
 render() {
   return (
     <div className="chatRooms">

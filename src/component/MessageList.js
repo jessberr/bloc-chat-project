@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class MessageList extends Component {
   constructor(props){
     super(props);
-    this.state = {message:[] };
+    this.state = { message: [ ] };
     this.messageRef = this.props.firebase.database().ref('message');
   }
 
@@ -19,7 +19,7 @@ class MessageList extends Component {
     return (
     <section className="list-messages">
       <div className="room-messages">
-        
+      <h3>Messages will show here</h3>
       </div>
     </section>
     );
