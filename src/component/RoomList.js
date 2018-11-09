@@ -32,30 +32,18 @@ class RoomList extends Component {
     console.log('CLICK');
 	}
 
- render() {
-    return (
-	<div className="chatRooms">
-	  <h3>Chat Rooms:</h3>
-	  <section className="room-list">
-      {this.state.rooms.map((room) =>
-	      <h3 key={room.key}
-            onClick={(e) =>
-            this.handleClick(room) } >
-          {room.name} </h3>
-
-
-	     )
-	    }
-	</section>
-
-	  <form className="newRooms" onSubmit={ (e) => this.createRoom(e) }>
-	         <input className="form-input" type="text" value={ this.state.newRoom } onChange={(e) => this.handleChange(e)} />
-	         <input className="create-button" type="submit" name="submit" value="Create"/>
-	  </form>
-
- </div>
-    );
-  }
-}
+  render() {
+     return (
+ 			<div>
+ 			<h2 className="roomHeader">Rooms</h2>
+     	<ul className="roomList">{this.state.rooms.map((room) => (<li key={room.name} onClick={() => this.props.setActiveRoom(room)}>{room.name}</li>))}</ul>
+      <form className="newRooms" onSubmit={ (e) => this.createRoom(e) }>
+  	         <input className="form-input" type="text" value={ this.state.newRoom } onChange={(e) => this.handleChange(e)} />
+  	         <input className="create-button" type="submit" name="submit" value="Create"/>
+  	  </form>
+ 			</div>
+ 	  )
+   }
+ }
 
 export default RoomList;

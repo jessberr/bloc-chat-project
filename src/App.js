@@ -30,14 +30,15 @@ class App extends Component {
  }
 
 setActiveRoom(room) {
-  this.setState({ activeRoom: room, isActive: true });
+  console.log(room);
+  this.setState({ activeRoom: room });
  }
 
   render() {
     return (
       <div className="App">
           <header className="App-header">
-             <h1>Bloc ChatterBoxes</h1>
+             <h1>ChatterBox</h1>
            </header>
       <main className="App-body">
         <aside className="Room-list">
@@ -46,10 +47,6 @@ setActiveRoom(room) {
              isActive={this.state.isActive}
              setActiveRoom={this.setActiveRoom.bind(this)}
              activeRoom={this.state.activeRoom}
-             createRoom={(e) => this.createRoom(e)}
-             handleChange={(e) => this.handleChange}
-             handleClick={(e) => this.handleClick(e)}
-             roomMessages={this.state.roomMessages}
            />
          </aside>
          <div className="list-messages">
@@ -57,7 +54,7 @@ setActiveRoom(room) {
              firebase={firebase}
              isActive={this.state.isActive}
              activeRoom={this.state.activeRoom}
-             messages={this.state.message}
+             setActiveRoom={this.setActiveRoom.bind(this)}
            />
          </div>
       </main>
