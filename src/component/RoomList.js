@@ -31,6 +31,9 @@ roomCreation (e) {
     });
     this.setState({newRoom:''});
   }
+
+//Add handleClick (e) { }
+
 }
 
 render() {

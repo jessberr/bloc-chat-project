@@ -16,10 +16,21 @@ import MessageList from './component/MessageList';
   firebase.initializeApp(config);
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      activeRoom: '',
+    };
+  }
+
+  selectActiveRoom () {
+    this.setState({ });
+  }
+
   render() {
     return (
       <div className="App">
-      
+
         <header className="App-header">
           <h1>Bloc ChatterBoxes</h1>
         </header>
@@ -33,7 +44,6 @@ class App extends Component {
              <MessageList firebase= { firebase } />
            </div>
         </main>
-
 
           <footer className="App-footer">
             <h6>Copyright Jess Berrett</h6>
