@@ -16,23 +16,23 @@
 }
 
 .App-body {
-  min-height: 500px;
+  min-height: 800px;
 }
 
 .Room-list {
   float: left;
-  min-height: 480px;
+  min-height: 785px;
   border: dotted .5px coral;
   padding: 5px;
   margin: 3px;
   text-align: center;
   display: flex;
-
+  text-align: left;
 }
 
 .list-messages {
-  float: left;
-  min-height: 480px;
+  float: center;
+  min-height: 785px;
   border: dotted .5px teal;
   padding: 5px;
   margin: 3px;
