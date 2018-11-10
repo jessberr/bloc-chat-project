@@ -11,7 +11,7 @@ class MessageList extends Component {
        { username: " " },
 	     { content:  " " },
 	     { sentAt: " "},
-       { roomID: " " }
+       { roomID: " " },
     ],
 
 	};
@@ -25,7 +25,6 @@ class MessageList extends Component {
 	   });
 	}
 
-  setTimeStamp
 
 
       render() {
@@ -36,8 +35,8 @@ class MessageList extends Component {
               .map((message, index)=>
               <div key= {index}>
                <strong>{message.username}</strong>
-               {message.content}
-               {message.sentAt}
+               {message.content} <br />
+               { message.sentAt}
             </div>
         )}
       </ul>
