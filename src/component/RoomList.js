@@ -36,7 +36,7 @@ class RoomList extends Component {
      return (
  			<div>
  			<h2 className="roomHeader">Rooms</h2>
-     	<p className="roomList">{this.state.rooms.map((room) => (<button key={room.name} onClick={() => this.props.setActiveRoom(room)}>{room.name}</button>))}</p>
+     	<p className="roomList">{this.state.rooms.map((room) => (<button className="room-buttons" key={room.name} onClick={() => this.props.setActiveRoom(room)}>{room.name}</button>))}</p>
       <form className="newRooms" onSubmit={ (e) => this.createRoom(e) }>
   	         <input className="form-input" type="text" value={ this.state.newRoom } onChange={(e) => this.handleChange(e)} />
   	         <input className="create-button" type="submit" name="submit" value="Create"/>
