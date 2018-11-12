@@ -44,7 +44,7 @@ setActiveRoom(room) {
     return (
       <div className="App">
           <header className="App-header">
-          <span className="login-button">
+          <span>
               <User
                 firebase={firebase}
                 setUser={this.setUser.bind(this)}

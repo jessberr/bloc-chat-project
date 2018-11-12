@@ -18,6 +18,14 @@
   float: left;
 }
 
+.log-out-button {
+  float: left;
+}
+
+.display-user-name{
+  float: right;
+}
+
 .App-body {
   min-height: 800px;
 }
