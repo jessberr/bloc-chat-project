@@ -21,9 +21,9 @@ render() {
   return(
 
   <div>
-    <div className="display-user-name">Welcome <strong>{this.props.user.displayName}</strong>!</div>
+    <div className="display-user-name">Welcome <strong className="specific-user">{ this.props.user ? this.props.user.displayName : "Guest" }!</strong></div>
     <button className="login-button" onClick={() =>this.signInWithPopup()}>Login</button>
-    <button className="log-out-button" onClick={() => this.props.auth().signOut()}>Logout</button>
+    <button className="log-out-button" onClick={() => this.props.firebase.auth().signOut()}>Logout</button>
   </div>
   )
 }

@@ -16,14 +16,26 @@
 
 .login-button{
   float: left;
+  padding: 3px;
+  margin: 3px;
+  background-color: coral;
+  color: white;
 }
 
 .log-out-button {
   float: left;
+  padding: 3px;
+  margin: 3px;
+  background-color: coral;
+  color: white;
 }
 
 .display-user-name{
   float: right;
+}
+
+.specific-user {
+  
 }
 
 .App-body {
