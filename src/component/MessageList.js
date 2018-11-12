@@ -25,7 +25,9 @@ class MessageList extends Component {
 	   });
 	}
 
-
+  timeStamp() {
+    this.messageRef.push({sentAt: this.props.firebase.database.ServerValue.TIMESTAMP });
+  }
 
       render() {
          return (

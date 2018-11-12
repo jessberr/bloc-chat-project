@@ -26,8 +26,13 @@ class App extends Component {
 	      { key: '' }
 	    ],
   	isActive: true,
+    user: ''
 
    };
+ }
+
+ setUser (user){
+   this.setState({ user: user })
  }
 
 setActiveRoom(room) {
@@ -39,10 +44,12 @@ setActiveRoom(room) {
     return (
       <div className="App">
           <header className="App-header">
-          <span>
-            <button className="login-button">
-              <p>Login</p>
-            </button>
+          <span className="login-button">
+              <User
+                firebase={firebase}
+                setUser={this.setUser.bind(this)}
+                user={this.state.user}
+              />
           </span>
             <h1>ChatterBox</h1>
           </header>
