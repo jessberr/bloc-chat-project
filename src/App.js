@@ -3,6 +3,7 @@ import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './component/RoomList';
 import MessageList from './component/MessageList';
+import User from './component/User';
 
 
 var config = {
@@ -38,8 +39,13 @@ setActiveRoom(room) {
     return (
       <div className="App">
           <header className="App-header">
-             <h1>ChatterBox</h1>
-           </header>
+          <span>
+            <button className="login-button">
+              <p>Login</p>
+            </button>
+          </span>
+            <h1>ChatterBox</h1>
+          </header>
       <main className="App-body">
         <aside className="Room-list">
            <RoomList
