@@ -78,3 +78,15 @@
   font-style: italic;
 
 }
+.create-button{
+  margin: 3px;
+  padding:3px;
+  font-family: monospace;
+  background-color: coral;
+}
+.send-button{
+  margin:3px;
+  padding: 3px;
+  background-color: coral;
+  font-family: monospace;
+}

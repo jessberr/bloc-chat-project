@@ -20,12 +20,9 @@ class App extends Component {
     super(props);
 
     this.state = {
-	    activeRoom: [
-	      { name: '' },
-	      { key: '' }
-	    ],
+	    activeRoom: "",
     	isActive: true,
-      user: ''
+      user: ""
 
    };
  }
@@ -69,6 +66,7 @@ setActiveRoom(room) {
              activeRoom={this.state.activeRoom}
              setActiveRoom={this.setActiveRoom.bind(this)}
              newMessage={this.state.newMessage}
+             user={this.state.user}
            />
          </div>
       </main>

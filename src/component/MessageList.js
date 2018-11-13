@@ -7,12 +7,7 @@ class MessageList extends Component {
 
 
 	this.state = {
-	   messages: [
-       { username: this.props.user},
-	     { content:  " " },
-	     { sentAt: " "},
-       { roomID: " " },
-    ],
+	   messages: [],
     newMessage:''
 
 	};
@@ -29,7 +24,7 @@ class MessageList extends Component {
   createMessage(e) {
     console.log('MESSAGE');
     e.preventDefault();
-    this.messagesRef.push({ name: this.state.newMessage });
+    this.messagesRef.push({  content: this.state.newMessage, username: this.props.user ? this.props.user.displayName : "Guest: ", roomID: this.props.activeRoom.key});
 	  this.setState({ newMessage: '' });
   }
 
@@ -40,6 +35,8 @@ class MessageList extends Component {
   timeStamp() {
     this.messagesRef.push({sentAt: this.props.firebase.database.ServerValue.TIMESTAMP });
   }
+
+
 
       render() {
          return (
@@ -58,15 +55,13 @@ class MessageList extends Component {
         )}
       </ul>
 
-      <div className="new-message-area">
-
-        <form className="new-message">
+        <form className="new-message" onSubmit={ (e) => this.createMessage(e) }>
           <p className="title">New Message:
-            <input type="text" name="message" size="100" maxlength="150" />
-            <input type="submit" name="Send" value="Send" />
+            <input type=" text" name="message" size="100" maxLength="150" value={this.state.newMessage} onChange={(e) => this.handleChange(e)} />
+            <input className="send-button" type="submit" name="Send" value="Send" />
           </p>
         </form>
-      </div>
+
    </div>
    );
   }
