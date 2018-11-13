@@ -48,6 +48,7 @@ setActiveRoom(room) {
                 firebase={firebase}
                 setUser={this.setUser.bind(this)}
                 user={this.state.user}
+                newMessage={this.state.newMessage}
               />
           </span>
             <h1 className="header-title">ChatterBox</h1>

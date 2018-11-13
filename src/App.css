@@ -49,6 +49,7 @@
   margin: 3px;
   text-align: center;
   flex-direction: column;
+  display: flex;
 }
 
 .room-buttons {
@@ -59,7 +60,9 @@
   font-family: monospace;
 }
 
-
+.Message-box-captions{
+  text-align: center;
+}
 .list-messages {
   min-height: 800px;
   border: dotted .5px teal;
@@ -67,7 +70,7 @@
   margin: 3px;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
 }
 
 .title{
