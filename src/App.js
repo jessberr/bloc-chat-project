@@ -5,7 +5,6 @@ import RoomList from './component/RoomList';
 import MessageList from './component/MessageList';
 import User from './component/User';
 
-
 var config = {
   apiKey: "AIzaSyB1gntTp8UUUMZngTL_x2N3hQexpZLh8Pg",
   authDomain: "bloc-chat-app-9aa67.firebaseapp.com",
@@ -25,8 +24,8 @@ class App extends Component {
 	      { name: '' },
 	      { key: '' }
 	    ],
-  	isActive: true,
-    user: ''
+    	isActive: true,
+      user: ''
 
    };
  }
@@ -51,30 +50,27 @@ setActiveRoom(room) {
                 user={this.state.user}
               />
           </span>
-            <h1>ChatterBox</h1>
+            <h1 className="header-title">ChatterBox</h1>
           </header>
-      <main className="App-body">
-        <aside className="Room-list">
+      <main className="Room-list">
            <RoomList
              firebase={firebase}
              isActive={this.state.isActive}
              setActiveRoom={this.setActiveRoom.bind(this)}
              activeRoom={this.state.activeRoom}
+             newMessage={this.state.newMessage}
            />
-         </aside>
+
          <div className="list-messages">
            <MessageList
              firebase={firebase}
              isActive={this.state.isActive}
              activeRoom={this.state.activeRoom}
              setActiveRoom={this.setActiveRoom.bind(this)}
+             newMessage={this.state.newMessage}
            />
          </div>
       </main>
-
-      <footer className="App-footer">
-        <h6>Copyright Jess Berrett</h6>
-      </footer>
 
       </div>
     );

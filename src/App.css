@@ -1,17 +1,21 @@
-.App {
 
-}
 
 .App-header {
-  background-color: gray;
+  background-color: #f2f2f2;
   min-height: 100px;
   display: flex;
   flex-direction: column;
   text-align: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
   border: dotted 1px black;
   margin: 3px
+}
+
+.header-title{
+  color:coral;
+  font-family: monospace;
+  margin-top:3px;
 }
 
 .login-button{
@@ -19,7 +23,8 @@
   padding: 3px;
   margin: 3px;
   background-color: coral;
-  color: white;
+  color: black;
+  font-family: monospace;
 }
 
 .log-out-button {
@@ -27,29 +32,23 @@
   padding: 3px;
   margin: 3px;
   background-color: coral;
-  color: white;
+  color: black;
+  font-family: monospace;
 }
 
 .display-user-name{
   float: right;
-}
-
-.specific-user {
-  
-}
-
-.App-body {
-  min-height: 800px;
+  font-family: monospace;
 }
 
 .Room-list {
-  float: left;
-  min-height: 785px;
+  min-height: 100px;
+  width: 1250px;
   border: dotted .5px coral;
-  padding: 5px;
+  padding: 10px;
   margin: 3px;
   text-align: center;
-  text-align: left;
+  flex-direction: column;
 }
 
 .room-buttons {
@@ -57,26 +56,22 @@
   margin: 5px;
   color: white;
   background-color: teal;
-
+  font-family: monospace;
 }
 
+
 .list-messages {
-  float: center;
-  min-height: 785px;
+  min-height: 800px;
   border: dotted .5px teal;
   padding: 5px;
   margin: 3px;
   display: flex;
-}
-
-.activeRoom {
-  background-color: coral;
-}
-
-
-.App-footer {
-  min-height: 15px;
-  border: solid .5px black;
+  flex-direction: column;
   text-align: center;
-  justify-content: center;
+}
+
+.title{
+  float: left;
+  font-style: italic;
+
 }
