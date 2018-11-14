@@ -41,14 +41,16 @@ class MessageList extends Component {
     });
   }
 
-  convertTimeStamp() {
-    let d = new Date();
+  convertTimeStamp(milliseconds) {
+    let d = new Date(milliseconds);
     let hour = d.getHours();
  		let min = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
  		let sec = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds();;
  		let time = hour + ':' + min + ':' + sec ;
  		return time;
   }
+
+
 
 
 render(){
