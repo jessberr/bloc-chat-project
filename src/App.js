@@ -31,7 +31,7 @@ class App extends Component {
    this.setState({ user: user })
  }
 
-setActiveRoom(room) {
+ setActiveRoom(room) {
   console.log(room);
   this.setState({ activeRoom: room });
  }
@@ -70,7 +70,6 @@ setActiveRoom(room) {
            />
          </div>
       </main>
-
       </div>
     );
   }
