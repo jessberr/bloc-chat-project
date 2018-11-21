@@ -19,7 +19,7 @@ class RoomList extends Component {
 
 	createRoom(e) {
 	  e.preventDefault();
-    
+
     this.roomsRef.push({ name: this.state.newRoomName });
 	  this.setState({ newRoom: '' });
 	}
@@ -32,6 +32,11 @@ class RoomList extends Component {
 	  this.props.setActiveRoom(room);
     console.log('CLICK');
 	}
+
+  deleteRoom(room) {
+    const delete = this.state.room.filter((room, activeRoom)=> activeRoom !== room);
+    this.setState({ room:room});
+  }
 
   render() {
      return (

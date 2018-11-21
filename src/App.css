@@ -84,6 +84,14 @@
   font-family: monospace;
   background-color: coral;
 }
+
+.delete-button{
+  margin: 3px;
+  padding:3px;
+  font-family: monospace;
+  background-color: coral;
+  float:right;
+}
 .send-button{
   margin:3px;
   padding: 3px;

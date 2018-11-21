@@ -56,11 +56,13 @@ class MessageList extends Component {
 render(){
   return (
     <div className="messages">
-      <div className="Message-box-captions">
+      <span className="Message-box-captions">
         <h2 className="Messages-instructions">
           Pick a room and start some chatter!
+          <input className="delete-button" type="button" value="Delete Room"/>
         </h2>
-      </div>
+
+      </span>
       <ul>
         {this.state.messages
           .filter(message => message.roomID === this.props.activeRoom.key)
