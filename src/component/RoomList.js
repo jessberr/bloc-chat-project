@@ -33,10 +33,7 @@ class RoomList extends Component {
     console.log('CLICK');
 	}
 
-  deleteRoom(room) {
-    const delete = this.state.room.filter((room, activeRoom)=> activeRoom !== room);
-    this.setState({ room:room});
-  }
+
 
   render() {
      return (

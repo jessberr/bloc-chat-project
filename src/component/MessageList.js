@@ -59,7 +59,7 @@ render(){
       <span className="Message-box-captions">
         <h2 className="Messages-instructions">
           Pick a room and start some chatter!
-          <input className="delete-button" type="button" value="Delete Room"/>
+          
         </h2>
 
       </span>
