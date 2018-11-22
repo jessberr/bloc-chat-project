@@ -51,6 +51,7 @@ class MessageList extends Component {
   }
 
   sendMessageForm(activeRoom) {
+<<<<<<< HEAD
     if (activeRoom.key) {
         return <form className="new-message" onSubmit={e => this.createMessage(e)}>
           <p className="title">
@@ -95,6 +96,54 @@ render(){
       </span>
 
     </div>
+=======
+     if (activeRoom.key) {
+         return <form className="new-message" onSubmit={e => this.createMessage(e)}>
+           <p className="title">
+             New Message:
+             <input
+               type=" text"
+               name="message"
+               size="100"
+               maxLength="150"
+               value={this.state.newMessage}
+               onChange={e => this.handleChange(e)}
+             />
+             <input
+               className="send-button"
+               type="submit"
+               name="Send"
+               value="Send"
+             />
+           </p>
+         </form>
+     } else {
+         return <p className="no-assigned-room"> <strong>Pick a room and start chatting!</strong></p>
+     }
+ }
+
+
+ render(){
+   return (
+     <div className="messages">
+
+       <ul>
+         {this.state.messages
+           .filter(message => message.roomID === this.props.activeRoom.key)
+           .map((message, index) => (
+             <div key={index}>
+               <strong>{message.username}</strong>
+               {message.content} <br />
+               {this.convertTimeStamp(message.sentAt)}
+             </div>
+           ))}
+       </ul>
+       <span>
+         {this.sendMessageForm(this.props.activeRoom)}
+       </span>
+
+     </div>
+>>>>>>> send-messages
   );
 }
 }
