@@ -50,19 +50,35 @@ class MessageList extends Component {
  		return time;
   }
 
-
-
+  sendMessageForm(activeRoom) {
+    if (activeRoom.key) {
+        return <form className="new-message" onSubmit={e => this.createMessage(e)}>
+          <p className="title">
+            New Message:
+            <input
+              type=" text"
+              name="message"
+              size="100"
+              maxLength="150"
+              value={this.state.newMessage}
+              onChange={e => this.handleChange(e)}
+            />
+            <input
+              className="send-button"
+              type="submit"
+              name="Send"
+              value="Send"
+            />
+          </p>
+        </form>
+    } else {
+        return <p> <strong>Pick a room and start some chatter!</strong></p>
+    }
+}
 
 render(){
   return (
     <div className="messages">
-      <span className="Message-box-captions">
-        <h2 className="Messages-instructions">
-          Pick a room and start some chatter!
-          
-        </h2>
-
-      </span>
       <ul>
         {this.state.messages
           .filter(message => message.roomID === this.props.activeRoom.key)
@@ -74,26 +90,10 @@ render(){
             </div>
           ))}
       </ul>
+      <span>
+        {sendMessageForm(this.sendMessageForm)}
+      </span>
 
-      <form className="new-message" onSubmit={e => this.createMessage(e)}>
-        <p className="title">
-          New Message:
-          <input
-            type=" text"
-            name="message"
-            size="100"
-            maxLength="150"
-            value={this.state.newMessage}
-            onChange={e => this.handleChange(e)}
-          />
-          <input
-            className="send-button"
-            type="submit"
-            name="Send"
-            value="Send"
-          />
-        </p>
-      </form>
     </div>
   );
 }

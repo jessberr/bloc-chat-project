@@ -57,6 +57,7 @@ class App extends Component {
              setActiveRoom={this.setActiveRoom.bind(this)}
              activeRoom={this.state.activeRoom}
              newMessage={this.state.newMessage}
+             
            />
 
          <div className="list-messages">
@@ -67,6 +68,7 @@ class App extends Component {
              setActiveRoom={this.setActiveRoom.bind(this)}
              newMessage={this.state.newMessage}
              user={this.state.user}
+
            />
          </div>
       </main>
