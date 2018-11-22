@@ -90,3 +90,9 @@
   background-color: coral;
   font-family: monospace;
 }
+
+.no-assigned-room {
+  text-align: center;
+  font-family: monospace;
+  font-size: 5em;
+}

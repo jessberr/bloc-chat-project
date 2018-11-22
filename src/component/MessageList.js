@@ -72,7 +72,7 @@ class MessageList extends Component {
            </p>
          </form>
      } else {
-         return <p> <em>Pick a room and start chatting!</em></p>
+         return <p className="no-assigned-room"> <strong>Pick a room and start chatting!</strong></p>
      }
  }
 
@@ -80,6 +80,7 @@ class MessageList extends Component {
  render(){
    return (
      <div className="messages">
+
        <ul>
          {this.state.messages
            .filter(message => message.roomID === this.props.activeRoom.key)
@@ -92,7 +93,7 @@ class MessageList extends Component {
            ))}
        </ul>
        <span>
-         {sendMessageForm(this.props.activeRoom)}
+         {this.sendMessageForm(this.props.activeRoom)}
        </span>
 
      </div>
